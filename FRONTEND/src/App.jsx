@@ -1,25 +1,33 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import Header from './components/header.jsx'
 import Index from './components/index.jsx'
 import Login from './components/login.jsx'
 import DashBoard from './components/dashboard.jsx'
+import Registro from './components/registro.jsx';
 import './App.css'
 
 function App() {
-
-  const [vista, setVista] = useState('index');
 
   return (
     
     <>
     
-      <Header />  
+    
+     <BrowserRouter>
+      <Header />
+      <Routes>
 
-      {vista === 'index' && <Index cambiarVista = {setVista}/>}
+        <Route path='/' element={<Index />}/>
 
-      {vista === 'login' && <Login cambiarVista = {setVista}/>}
+        <Route path="/login" element={<Login />} />
 
-      {vista === 'dashboard' && <DashBoard cambiarVista = {setVista}/>}
+        <Route path="/dashboard" element={<DashBoard />} />
+
+        <Route path='/registro' element={<Registro />}/>
+
+      </Routes>
+    </BrowserRouter>
     
     </>
 

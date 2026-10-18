@@ -1,3 +1,4 @@
+
 a {
   text-decoration: none;
 }
@@ -73,13 +74,21 @@ a {
 
 .program-nav-inner>a,
 .nav-dropdown summary {
-  padding: .55rem .15rem;
+  padding: 0.50rem .60rem;
   color: #edf3fb;
   cursor: pointer;
-  font-size: .87rem;
+  font-size: 20px;
   font-weight: 650;
   list-style: none;
   transition: color .18s ease;
+}
+
+.program-nav-inner>a:hover,
+.nav-dropdown summary:hover{
+  border-left: 2px solid var(--gold);
+  color: var(--gold);
+  background: var(--navy);
+  border-radius: 0px 5px 5px 0px;
 }
 
 .nav-dropdown {
@@ -105,7 +114,7 @@ a {
   padding: .45rem;
   border: 1px solid rgb(255 255 255 / 12%);
   border-radius: .55rem;
-  background: #09284f;
+  background: #09294fd3;
   box-shadow: 0 14px 34px rgb(0 12 29 / 25%);
 }
 
@@ -117,7 +126,7 @@ a {
   padding: .6rem .7rem;
   border-radius: .35rem;
   color: #edf3fb;
-  font-size: .87rem;
+  font-size: 20px;
   white-space: normal;
 }
 

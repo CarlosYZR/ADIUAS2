@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "../assets/css/login.css";
 import eyeIcon from "../assets/img/eye.svg";
 
-const Login = ({ cambiarVista }) => {
+const Login = () => {
+  const navigate = useNavigate();
   return (
     <>
       <main className="login-page">
@@ -56,7 +58,7 @@ const Login = ({ cambiarVista }) => {
             </button>
           </div>
 
-          <input type="submit" value="Ingresar" className="btn" onClick={()=>cambiarVista('dashboard')}/>
+          <input type="submit" value="Ingresar" className="btn" onClick={() => navigate('/dashboard')}/>
         </form>
       </div>
       </main>

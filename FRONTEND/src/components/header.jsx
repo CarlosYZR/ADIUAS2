@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import logoUas from '../assets/img/logo-uas.png';
 import '../assets/css/header.css';
 import logoAdiuas from '../assets/img/adiuas-logo.png';
 
 const Header = () => {
+
+    const navigate = useNavigate();
 
     return(
 
@@ -25,22 +29,32 @@ const Header = () => {
 
                 <nav class="program-nav" aria-label="Navegación principal">
                     <div class="program-nav-inner">
-                        <a href="index.jsx">Inicio</a>
-                        <a href="RegistroVisita.php" aria-current="page">Registrar visita</a>
+                        <a href="/" className='header-nav-item'>Inicio</a>
+                        <a onClick={()=>navigate('/registro')} aria-current="page" >Registrar visita</a>
                         <details class="nav-dropdown">
-                            <summary>Ciclo escolar</summary>
+                            <summary className='header-nav-item'>Ciclo escolar</summary>
                             <div class="dropdown-panel">
 
-                                <a href="#"></a>
-                                
+                                <a href="#">2020 - 2021</a>
+                                <a href="#">2021 - 2022</a>
+                                <a href="#">2022 - 2023</a>
+                                <a href="#">2023 - 2024</a>
+                                <a href="#">2024 - 2025</a>
+                                <a href="#">2025 - 2026</a>
+
                             </div>
                         </details>
                         <details class="nav-dropdown">
-                            <summary>Unidades</summary>
+                            <summary className='header-nav-item'>Unidades</summary>
                             <div class="dropdown-panel">
                                 
-                                <a href="informes.php"></a>
-                               
+                                <a href="#">Tifotecnologias</a>
+                                <a href="#">Audicion y lenguaje</a>
+                                <a href="#">Psicopedagogia</a>
+                                <a href="#">123</a>
+                                <a href="#">123</a>
+                                <a href="#">123</a>
+
                             </div>
                         </details>
                     </div>

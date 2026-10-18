@@ -1,4 +1,4 @@
-
+@import url("../../App.css");
 
 .dashboard {
   min-height: calc(100vh - 177px);
@@ -16,7 +16,7 @@
   overflow: hidden;
   border: 1px solid #dce5ef;
   border-radius: 20px;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0 24px 60px rgb(7 31 62 / 13%);
 }
 

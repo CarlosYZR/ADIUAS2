@@ -5,18 +5,20 @@ import campusImage from '../assets/img/rectoria2.jpg';
 import activityImage from '../assets/img/carrusel-item2.jpg';
 import Tal from "../assets/img/carrusel-item.jpg"
 
+//Editables para el carrusel
+//Agregar y quitar segun convenga
 const slides = [
   {
     title: 'Inclusión y accesibilidad',
     description:
-      'Conoce las acciones de ADIUAS para eliminar barreras y construir espacios universitarios donde todas las personas puedan participar.',
-    image: bannerImage,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoqua. Ut enim ad minico laboris nisi ut aliquip ex ex',
+    image: bannerImage,  
     imageAlt: 'Banner del Programa ADIUAS',
   },
   {
-    title: 'Una universidad para todas las personas',
+    title: 'Universidad para todas las personas',
     description:
-      'La comunidad universitaria trabaja para ofrecer apoyos, orientación y oportunidades que favorezcan la participación y el aprendizaje.',
+      'ADIUAS acompaña a aspirantes y estudiantes de bachillerato y licenciatura para que ingresen, permanezcan y concluyan sus estudios en igualdad de condiciones.',
     image: campusImage,
     imageAlt: 'Instalaciones de la Universidad Autónoma de Sinaloa',
   },
@@ -53,12 +55,11 @@ const Dashboard = () => {
             alt={slide.imageAlt}
           />
           <span className="dashboard-carousel__counter">
-            {activeSlide + 1} / {slides.length}
+            {activeSlide+1} / {slides.length}
           </span>
         </div>
 
         <div className="dashboard-carousel__content" aria-live="polite">
-          <span className="dashboard-carousel__eyebrow">Programa ADIUAS</span>
           <h1>{slide.title}</h1>
           <p>{slide.description}</p>
           <div className="dashboard-carousel__controls">

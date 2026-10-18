@@ -1,4 +1,5 @@
-/* La pantalla de bienvenida ocupa toda la vista, como en el diseño de referencia. */
+@import url("../../App.css");
+
 :root:has(.index-landing) .site-header {
   display: none;
 }
@@ -35,7 +36,7 @@
 }
 
 .landing-hero h1 {
-  color: #c99d00;
+  color: var(--gold);
   font-size: 50px;
   font-weight: 800;
   line-height: 1.02;
@@ -52,7 +53,7 @@
 .landing-hero__quote {
   margin: 0 0 11px;
   padding: 10px 13px;
-  border-left: 2px solid #c99d00;
+  border-left: 2px solid var(--gold);
   border-radius: 0 4px 4px 0;
   background: rgb(2 20 43 / 68%);
   font-size: 20px;
@@ -67,15 +68,16 @@
   padding: 0 12px;
   border: 0;
   border-radius: 5px;
-  background: #c49a00;
+  background: var(--gold);
   color: #fff;
   cursor: pointer;
   font-size: 17px;
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .landing-hero__button:hover {
-  background: #ad8500;
+  background: var(--gold-dark);
 }
 
 .landing-hero__button:focus-visible {
@@ -96,7 +98,7 @@
 
 .welcome-section h2 {
   margin: 0 0 10px;
-  color: #c99d00;
+  color: var(--gold);
   font-size: 55px;
   font-weight: 800;
   line-height: 1.2;
@@ -137,7 +139,7 @@
   left: -8px;
   width: 50px;
   height: 48px;
-  background: #ad8500;
+  background: var(--gold);
   clip-path: polygon(0 0, 100% 0, 0 100%);
   content: "";
   pointer-events: none;

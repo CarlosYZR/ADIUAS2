@@ -1,0 +1,213 @@
+.registro-page {
+  min-height: calc(100vh - 177px);
+  padding: clamp(1.5rem, 4vw, 3.5rem) 1rem;
+  background:
+    linear-gradient(rgb(5 27 51 / 30%), rgb(5 27 51 / 30%)),
+    url("../img/rectoria.jpg") center 48% / cover fixed;
+}
+
+.registro-card {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 3.25rem);
+  border: 1px solid rgb(255 255 255 / 75%);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 97%);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 25%);
+  backdrop-filter: blur(10px);
+}
+
+.registro-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.registro-heading h1 {
+  margin: 0 0 .6rem;
+  color: var(--navy, #071f3e);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.registro-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.registro-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 1.35rem;
+  border: 1px solid var(--gold);
+  border-radius: .8rem;
+  background: #fff;
+}
+
+.registro-fieldset legend {
+  padding: 0 .55rem;
+  color: var(--gold);
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.registro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.25rem;
+}
+
+.registro-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: .45rem;
+  color: var(--ink, #142d4d);
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.registro-field input,
+.registro-field select,
+.registro-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: .75rem .85rem;
+  border: 1px solid #b7c7d9;
+  border-radius: .5rem;
+  background: #f8fafc;
+  color: var(--ink, #142d4d);
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 400;
+  transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+.registro-field input::placeholder,
+.registro-field textarea::placeholder {
+  color: #8798ab;
+}
+
+.registro-field input:focus,
+.registro-field select:focus,
+.registro-field textarea:focus {
+  border-color: var(--gold, #c49e0d);
+  outline: 3px solid rgb(196 158 13 / 17%);
+  background: #fff;
+}
+
+.registro-field input[type="file"] {
+  padding: .55rem;
+}
+
+.registro-field input[type="file"]::file-selector-button {
+  margin-right: .75rem;
+  padding: .45rem .75rem;
+  border: 0;
+  border-radius: .35rem;
+  background: #f6efd3;
+  color: var(--navy, #071f3e);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.registro-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.registro-field small {
+  color: #6c7e92;
+  font-size: .78rem;
+  font-weight: 400;
+}
+
+.registro-field--full {
+  grid-column: 1 / -1;
+}
+
+.registro-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  color: #536b86;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.registro-consent input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin-top: .12rem;
+  accent-color: var(--gold, #c49e0d);
+}
+
+.registro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+}
+
+.registro-actions button {
+  min-height: 48px;
+  padding: .75rem 1.35rem;
+  border: 1px solid var(--navy, #071f3e);
+  border-radius: .5rem;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 750;
+}
+
+.registro-actions .registro-submit {
+  border-color: var(--navy, #c49e0d);
+  background: var(--navy, #c49e0d);
+  color: var(--white, #071f3e);
+}
+
+.registro-actions .registro-submit:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.registro-reset {
+  background: #fff;
+  color: var(--navy, #071f3e);
+}
+
+.registro-reset:hover {
+  background: #edf2f8;
+}
+
+.registro-actions button:focus-visible {
+  outline: 3px solid rgb(196 158 13 / 45%);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .registro-page {
+    padding: 1.1rem .75rem 2rem;
+    background-attachment: scroll;
+  }
+
+  .registro-card {
+    padding: 1.25rem .9rem;
+  }
+
+  .registro-fieldset {
+    padding: 1rem .85rem;
+  }
+
+  .registro-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .registro-field--full {
+    grid-column: auto;
+  }
+
+  .registro-actions {
+    flex-direction: column;
+  }
+}
