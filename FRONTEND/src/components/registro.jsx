@@ -44,23 +44,23 @@ const Registro = () => (
         </fieldset>
 
         <fieldset className="registro-fieldset">
-          <legend>Contacto y ubicación</legend>
+          <legend>Datos</legend>
           <div className="registro-grid">
             <label className="registro-field">
               <span>Correo electrónico</span>
-              <input name="correo" type="email" autoComplete="email" placeholder="nombre@ejemplo.com" required />
+              <input name="correo" type="email" autoComplete="email" placeholder="" required />
             </label>
             <label className="registro-field">
-              <span>Teléfono celular</span>
-              <input name="telefono" type="tel" autoComplete="tel" inputMode="tel" placeholder="10 dígitos" />
+              <span>Numero</span>
+              <input name="telefono" type="number" inputMode="tel" placeholder="" maxLength="10"/>
             </label>
             <label className="registro-field">
-              <span>Municipio</span>
-              <input name="municipio" type="text" placeholder="Municipio" />
+              <span>No. Cuenta</span>
+              <input name="cuenta" type="number" placeholder="(sin guion)" maxLength="8"/>
             </label>
             <label className="registro-field">
               <span>Domicilio</span>
-              <input name="domicilio" type="text" autoComplete="street-address" placeholder="Calle, número y colonia" />
+              <input name="domicilio" type="text" autoComplete="street-address" placeholder="" />
             </label>
           </div>
         </fieldset>
@@ -70,11 +70,11 @@ const Registro = () => (
           <div className="registro-grid">
             <label className="registro-field">
               <span>Unidad académica</span>
-              <input name="unidad_academica" type="text" placeholder="Facultad o escuela" />
+              <input name="unidad_academica" type="text" placeholder="" />
             </label>
             <label className="registro-field">
               <span>Programa educativo</span>
-              <input name="programa_educativo" type="text" placeholder="Carrera o programa" />
+              <input name="programa_educativo" type="text" placeholder="" />
             </label>
             <label className="registro-field">
               <span>Grado o semestre</span>
@@ -98,27 +98,13 @@ const Registro = () => (
               </select>
             </label>
             <label className="registro-field registro-field--full">
-              <span>Describe los apoyos o ajustes que necesitas</span>
-              <textarea name="descripcion_apoyo" rows="4" placeholder="Comparte la información que consideres importante" />
+              <span>Datos extra</span>
+              <textarea name="descripcion_apoyo" rows="4" placeholder="Escribe datos que te pueden ayudar a darle un mejor seguimiento al caso" />
             </label>
             <label className="registro-field registro-field--full">
               <span>Documento de identificación (opcional)</span>
               <input name="documento" type="file" accept=".pdf,.jpg,.jpeg,.png" />
               <small>Formatos permitidos: PDF, JPG o PNG.</small>
-            </label>
-          </div>
-        </fieldset>
-
-        <fieldset className="registro-fieldset">
-          <legend>Contacto de emergencia (opcional)</legend>
-          <div className="registro-grid">
-            <label className="registro-field">
-              <span>Nombre de contacto</span>
-              <input name="contacto_emergencia" type="text" placeholder="Nombre completo" />
-            </label>
-            <label className="registro-field">
-              <span>Teléfono de contacto</span>
-              <input name="telefono_emergencia" type="tel" inputMode="tel" placeholder="10 dígitos" />
             </label>
           </div>
         </fieldset>

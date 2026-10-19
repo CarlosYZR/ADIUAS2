@@ -14,7 +14,10 @@ a {
 }
 
 .site-header{
-   position: relative;
+   position: sticky;
+   position: -webkit-sticky;
+   top: 0;
+   z-index: 10000;
    border-bottom: 3px solid var(--gold);
 }
 
@@ -46,7 +49,7 @@ a {
 }
 
 .institutional-title b {
-  color: var(--gold-bright);
+  color: var(--gold);
 }
 
 .adiuas-mark {
@@ -56,6 +59,10 @@ a {
   border-radius: .35rem;
   background: var(--white);
   object-fit: contain;
+}
+
+.adiuas-logo{
+  border-radius: 10px;
 }
 
 .program-nav {
@@ -85,10 +92,9 @@ a {
 
 .program-nav-inner>a:hover,
 .nav-dropdown summary:hover{
-  border-left: 2px solid var(--gold);
   color: var(--gold);
   background: var(--navy);
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
 }
 
 .nav-dropdown {

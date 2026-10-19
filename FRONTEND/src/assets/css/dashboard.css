@@ -2,47 +2,67 @@
 
 .dashboard {
   min-height: calc(100vh - 177px);
-  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 5rem);
-  background: url("../img/rectoria.jpg");
-  color: var(--ink, #142d4d);
+  padding: 0;
+  background: #eef2f6;
+  color: #fff;
 }
 
 .dashboard-carousel {
-  display: grid;
-  width: min(100%, 1280px);
-  min-height: 420px;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .9fr);
-  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: calc(100vh - 177px);
+  margin: 0;
   overflow: hidden;
-  border: 1px solid #dce5ef;
-  border-radius: 20px;
-  background: var(--white);
-  box-shadow: 0 24px 60px rgb(7 31 62 / 13%);
+  background: #172b45;
+  box-shadow: none;
 }
 
 .dashboard-carousel__image-wrap {
-  position: relative;
-  min-height: 420px;
+  position: absolute;
+  z-index: -2;
+  inset: 0;
   overflow: hidden;
-  background: #dce5ef;
+  background: #172b45;
+}
+
+.dashboard-carousel__image-wrap::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(5 22 49 / 84%) 0%, rgb(5 22 49 / 58%) 42%, rgb(5 22 49 / 12%) 78%), linear-gradient(0deg, rgb(5 22 49 / 38%), transparent 45%);
+  content: "";
 }
 
 .dashboard-carousel__image {
   display: block;
-  width: 900px;
-  height: 500px;
-  min-height: 420px;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
   object-fit: cover;
+  object-position: center;
+  animation: carousel-reveal .7s ease both;
+}
+
+@keyframes carousel-reveal {
+  from {
+    opacity: .55;
+    transform: scale(1.025);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .dashboard-carousel__counter {
   position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  padding: .5rem .8rem;
-  border: 1px solid rgb(255 255 255 / 55%);
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: .55rem .85rem;
+  border: 1px solid rgb(255 255 255 / 42%);
   border-radius: 999px;
-  background: rgb(7 31 62 / 78%);
+  background: rgb(8 28 57 / 50%);
   color: #fff;
   font-size: .85rem;
   font-weight: 700;
@@ -51,63 +71,72 @@
 
 .dashboard-carousel__content {
   display: flex;
+  width: min(670px, 72%);
+  min-height: inherit;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: clamp(2rem, 4vw, 4rem);
-}
-
-.dashboard-carousel__eyebrow {
-  margin-bottom: 1rem;
-  color: #9a7900;
-  font-size: .78rem;
-  font-weight: 800;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  justify-content: flex-end;
+  padding: clamp(2rem, 7vw, 6rem);
+  padding-bottom: clamp(2.5rem, 7vw, 6rem);
 }
 
 .dashboard-carousel__content h1 {
-  margin: 0 0 1.15rem;
-  color: var(--navy, #071f3e);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.08;
+  margin: 0 0 1rem;
+  color: var(--gold);
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: .98;
+  text-shadow: 0 3px 18px rgb(0 0 0 / 25%);
 }
 
 .dashboard-carousel__content p {
-  max-width: 42ch;
+  max-width: 54ch;
   margin: 0;
-  color: #536b86;
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
-  line-height: 1.75;
+  color: rgb(255 255 255 / 88%);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.65;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 25%);
 }
 
 .dashboard-carousel__controls {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2.25rem;
+  margin-top: 2rem;
 }
 
 .dashboard-carousel__arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
   display: grid;
-  width: 42px;
-  height: 42px;
-  padding: 0 0 4px;
+  width: 54px;
+  height: 72px;
+  padding: 0 0 5px;
   place-items: center;
-  border: 1px solid #cbd7e5;
-  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 0 50% 50% 0;
   background: #fff;
-  color: var(--navy, #071f3e);
+  color: var(--navy);
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2.6rem;
   line-height: 1;
-  transition: border-color .18s ease, background .18s ease, color .18s ease;
+  transition: background .18s ease, color .18s ease;
+}
+
+.dashboard-carousel__arrow:first-child {
+  left: 0;
+}
+
+.dashboard-carousel__arrow:last-child {
+  right: 0;
+  border-radius: 50% 0 0 50%;
 }
 
 .dashboard-carousel__arrow:hover {
-  border-color: var(--navy, #071f3e);
-  background: var(--navy, #071f3e);
+  background: var(--gold);
   color: #fff;
 }
 
@@ -118,48 +147,66 @@
 }
 
 .dashboard-carousel__dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   padding: 0;
-  border: 0;
+  border: 1px solid rgb(255 255 255 / 80%);
   border-radius: 99px;
-  background: #cbd7e5;
+  background: transparent;
   cursor: pointer;
   transition: width .18s ease, background .18s ease;
 }
 
 .dashboard-carousel__dot.is-active {
   width: 30px;
-  background: var(--gold, #c49e0d);
+  background: var(--gold);
 }
 
 .dashboard-carousel__arrow:focus-visible,
 .dashboard-carousel__dot:focus-visible {
-  outline: 3px solid rgb(10 58 115 / 35%);
+  outline: 3px solid #ffd24a;
   outline-offset: 3px;
 }
 
 @media (max-width: 760px) {
   .dashboard {
     min-height: calc(100vh - 177px);
-    padding: 1.5rem 1rem 2.5rem;
+    padding: 0;
   }
 
   .dashboard-carousel {
-    grid-template-columns: 1fr;
+    min-height: calc(100vh - 177px);
   }
 
-  .dashboard-carousel__image-wrap,
-  .dashboard-carousel__image {
-    min-height: 250px;
-    max-height: 340px;
+  .dashboard-carousel__image-wrap::after {
+    background: linear-gradient(0deg, rgb(5 22 49 / 88%) 0%, rgb(5 22 49 / 42%) 60%, rgb(5 22 49 / 10%) 100%);
   }
 
   .dashboard-carousel__content {
-    padding: 2rem 1.5rem 2.25rem;
+    width: 100%;
+    min-height: inherit;
+    justify-content: flex-end;
+    padding: 2rem 1.5rem 2.5rem;
   }
 
-  .dashboard-carousel__controls {
-    margin-top: 1.5rem;
+  .dashboard-carousel__content h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .dashboard-carousel__counter {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .dashboard-carousel__arrow {
+    width: 42px;
+    height: 58px;
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-carousel__image {
+    animation: none;
   }
 }

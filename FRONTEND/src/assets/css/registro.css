@@ -1,9 +1,8 @@
 .registro-page {
   min-height: calc(100vh - 177px);
   padding: clamp(1.5rem, 4vw, 3.5rem) 1rem;
-  background:
-    linear-gradient(rgb(5 27 51 / 30%), rgb(5 27 51 / 30%)),
-    url("../img/rectoria.jpg") center 48% / cover fixed;
+  background: linear-gradient(rgb(5 27 51 / 15%), rgb(5 27 51 / 15%)),
+        url('../img/rectoria.jpg') center 48% / cover fixed;
 }
 
 .registro-card {

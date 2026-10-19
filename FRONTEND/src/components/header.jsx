@@ -19,7 +19,7 @@ const Header = () => {
                     </a>
                     <div class="institutional-title">
                         <h2>Universidad Autónoma de Sinaloa</h2>
-                        <h1>Programa de Atención a la Diversidad <b>·</b> ADIUAS</h1>
+                        <h1>Programa de Atención a la Diversidad <b>•</b> ADIUAS</h1>
                     </div>
                 </div>
 
