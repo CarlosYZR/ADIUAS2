@@ -66,8 +66,11 @@ a {
 }
 
 .program-nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10000;
   position: relative;
-  z-index: 5;
   background: #09284f;
 }
 

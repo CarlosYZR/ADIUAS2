@@ -1,0 +1,5 @@
+#---  DEPENDENCIAS DEL NODE-EXPRESS-REACT  ---#
+node-modules/
+
+#--- ARCHIVOS ENV ---#
+.env*
