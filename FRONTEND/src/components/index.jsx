@@ -1,6 +1,5 @@
 ﻿import { useNavigate } from "react-router-dom";
 import "../assets/css/index.css";
-import rectoria from "../assets/img/rectoria.jpg";
 
 const services = [
   {
@@ -33,7 +32,6 @@ const Index = () => {
       <main className="index">
       <section
         className="landing-hero"
-        style={{ "--landing-background": `url(${rectoria})` }}
         aria-labelledby="landing-title"
       >
         <div className="landing-hero__content">

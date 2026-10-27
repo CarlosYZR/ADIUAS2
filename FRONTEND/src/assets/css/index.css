@@ -25,7 +25,7 @@
   background-color: #08294f;
   background-image:
     linear-gradient(90deg, rgb(4 28 56 / 88%) 0%, rgb(5 35 70 / 75%) 52%, rgb(5 38 73 / 69%) 100%),
-    var(--landing-background);
+    url("../img/rectoria.jpg");
   background-position: center 48%;
   background-size: cover;
 }

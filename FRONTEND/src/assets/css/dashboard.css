@@ -119,8 +119,8 @@
   transform: translateY(-50%);
   border: 0;
   border-radius: 0 50% 50% 0;
-  background: #fff;
-  color: var(--navy);
+  background: var(--gold);
+  color: var(--white);
   cursor: pointer;
   font-size: 2.6rem;
   line-height: 1;
@@ -137,8 +137,8 @@
 }
 
 .dashboard-carousel__arrow:hover {
-  background: var(--gold);
-  color: #fff;
+  background: var(--navy);
+  color: var(--gold);
 }
 
 .dashboard-carousel__dots {
