@@ -1,0 +1,82 @@
+.padron{
+    min-height: calc(100vh - 148px);
+    display: grid;
+    place-items: center;
+    padding: clamp(1.25rem, 4vh, 2.5rem) 1rem;
+    background: linear-gradient(rgb(5 27 51 / 15%), rgb(5 27 51 / 15%)),
+        url('../img/rectoria.jpg') center 48% / cover fixed;
+}
+
+.filtros-padron{
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 6vw, 5rem);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 96%);
+    box-shadow: 0 20px 55px rgb(0 0 0 / 25%);
+    margin-bottom: 2rem;
+}
+
+.filtros-padron h2{
+    margin: 0 0 1.25rem;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 4vw, 2.35rem);
+    font-weight: 800;
+    letter-spacing: .025em;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.filtros-padron select{
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: .025em;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.filtros-padron button{
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 750;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    color: var(--white);
+    background-color: var(--navy);
+    margin-top: 20px;
+}
+
+.filtros-padron button:hover{
+    background-color: var(--gold);
+    cursor: pointer;
+}
+
+.filtros-padron input{
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+}
+
+.tabla-padron{
+    margin: 0 auto;
+    padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 6vw, 5rem);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 96%);
+    box-shadow: 0 20px 55px rgb(0 0 0 / 25%);
+}
+
+table{
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table th, table td{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--navy);
+}
