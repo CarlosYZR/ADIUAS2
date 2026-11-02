@@ -3,7 +3,7 @@ import '../assets/css/dashboard.css';
 import bannerImage from '../assets/img/carrusel-banner.png';
 import campusImage from '../assets/img/rectoria2.jpg';
 import activityImage from '../assets/img/carrusel-item2.jpg';
-import Tal from "../assets/img/carrusel-item.jpg"
+import Ciencia from "../assets/img/carrusel-item.jpg"
 
 //Editables para el carrusel
 //Agregar y quitar segun convenga
@@ -32,7 +32,7 @@ const slides = [
   {
     title: "Ciencia",
     description: "Aprende con nosotros sobre todo",
-    image: Tal,
+    image: Ciencia,
     imageAlt: "hola",
   }
 ];

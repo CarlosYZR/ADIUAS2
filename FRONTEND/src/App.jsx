@@ -5,6 +5,7 @@ import Index from './components/index.jsx'
 import Login from './components/login.jsx'
 import DashBoard from './components/dashboard.jsx'
 import Registro from './components/registro.jsx';
+import Padron from './components/padron.jsx';
 import './App.css'
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path="/dashboard" element={<DashBoard />} />
 
         <Route path='/registro' element={<Registro />}/>
+
+        <Route path='/padron' element={<Padron />}/>
 
       </Routes>
     </BrowserRouter>

@@ -1,19 +1,20 @@
-class Estudiante{
-    constructor(id, nombre, edad, escuela, discapacidad, poblacion, curp,
-        genero, correo, numero, cuenta, domicilio, extras){
+class Estudiante {
+
+    constructor(id, nombre, edad, genero, correo, telefono, grupo, escuela, unidad, poblacion) {
 
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
-        this.escuela = escuela;
-        this.discapacidad = discapacidad;
-        this.poblacion = poblacion;
-        this.curp = curp;
         this.genero = genero;
         this.correo = correo;
-        this.numero = numero;
-        this.cuenta = cuenta;
-        this.domicilio = domicilio;
-        this.extras = extras;
+        this.telefono = telefono;
+        this.grupo = grupo;
+        this.escuela = escuela;
+        this.unidad = unidad;
+        this.poblacion = poblacion;
+
     }
+
 }
+
+module.exports = Estudiante;
