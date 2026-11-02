@@ -57,6 +57,8 @@ const Header = () => {
 
                             </div>
                         </details>
+
+                        <a onClick={() => navigate('/padron')} className='header-nav-item'>Padron</a>
                     </div>
                 </nav>
             </header>
