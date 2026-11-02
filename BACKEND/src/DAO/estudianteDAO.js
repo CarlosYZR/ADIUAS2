@@ -27,7 +27,7 @@ exports.listar = async() => {
   );
 };
 
-//METODO DE REGISTRAR NUEVO ESTUDIANTE
+
 exports.registrar = async(estudiante) => {
 
   try{
