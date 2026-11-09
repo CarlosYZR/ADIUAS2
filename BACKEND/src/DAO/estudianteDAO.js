@@ -23,8 +23,8 @@ exports.listar = async () => {
   );
 };
 
-//METODO DE REGISTRAR NUEVO ESTUDIANTE
-exports.registrar = async (estudiante) => {
+
+exports.registrar = async(estudiante) => {
 
   try {
     const registrar = await conexion.promise().query(
