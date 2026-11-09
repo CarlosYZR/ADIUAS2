@@ -88,8 +88,7 @@
 .welcome-section {
   min-height: 410px;
   padding: 42px clamp(24px, 5vw, 80px) 48px;
-  background: #f2f5fb;
-   background: url("../img/fondo-bottom-index.png") no-repeat center 0;
+  background: #f2f5fb url("../img/fondo-bottom-index.png") center top / cover no-repeat;
 }
 
 .welcome-section__content {

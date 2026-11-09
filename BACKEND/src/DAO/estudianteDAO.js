@@ -4,6 +4,7 @@ const conexion = require("../config/database");
 
 //METODO DE LISTAR ESTUDIANTES (SE SUPONE)
 exports.listar = async () => {
+
   const [registros] = await conexion.promise().query("SELECT * FROM adiuas.students");
 
   return registros.map(
@@ -27,8 +28,8 @@ exports.registrar = async(estudiante) => {
 
   try {
     const registrar = await conexion.promise().query(
-      "INSERT INTO adiuas.estudiantes (nombre, edad, escuela, discapacidad, curp, poblacion, genero, correo, numero, cuenta, domicilio, extras) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      [estudiante.nombre, estudiante.edad, estudiante.escuela, estudiante.discapacidad, estudiante.curp, estudiante.poblacion, estudiante.genero, estudiante.correo, estudiante.numero, estudiante.cuenta, estudiante.domicilio, estudiante.extras]
+      "INSERT INTO adiuas.students (nombre, edad, genero, correo, telefono, grupo, escuela, unidad, poblacion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      [estudiante.nombre, estudiante.edad, estudiante.genero, estudiante.correo, estudiante.telefono, estudiante.grupo, estudiante.escuela, estudiante.unidad, estudiante.poblacion]
 
     );
 
@@ -39,4 +40,4 @@ exports.registrar = async(estudiante) => {
     throw error;
   }
 
-}*/
+}

@@ -27,12 +27,27 @@
     text-align: center;
 }
 
+.filtros-padron h3{
+    text-align: center;
+    color: var(--navy);
+}
+
 .filtros-padron select{
     border-radius: 5px;
     font-size: 15px;
     font-weight: 750;
     letter-spacing: .025em;
     line-height: 1.1;
+    text-align: center;
+    height: 40px;
+}
+
+.filtros-padron label{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 750;
     text-align: center;
 }
 
@@ -47,6 +62,7 @@
     color: var(--white);
     background-color: var(--navy);
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .filtros-padron button:hover{
@@ -55,11 +71,13 @@
 }
 
 .filtros-padron input{
+    border: 1px solid var(--navy);
     border-radius: 5px;
     font-size: 15px;
     text-align: center;
     height: 35px;
     width: 200px;
+    margin-bottom: 10px;
 }
 
 .tabla-padron{
