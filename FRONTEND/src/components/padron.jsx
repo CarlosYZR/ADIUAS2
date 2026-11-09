@@ -57,7 +57,7 @@ const Padron = () => {
                 const resultado = await respuesta.json();
                 setEstudiantes(resultado.data ?? []);
             } catch (error) {
-                setError(error.message === 'Failed to fetch' ? 'No se pudo conectar con el servidor. Inicia el backend en el puerto 3000 e intenta de nuevo.' : error.message || 'Ocurrió un error al cargar el padrón.');
+                setError(error.message === 'Failed to fetch' ? 'No se pudo conectar con el servidor.' : error.message || 'Ocurrió un error al cargar el padrón.');
             } finally {
                 setCargando(false);
             }
@@ -74,7 +74,7 @@ const Padron = () => {
                     <h2>Filtros del padrón</h2>
                     <div>
                         <label>
-                            Buscar
+                            Buscar: &nbsp;
                            <input
                                 type="search"
                                 value={filtros.busqueda}
@@ -86,10 +86,10 @@ const Padron = () => {
                             ['genero', 'Género'],
                             ['grupo', 'Grupo'],
                             ['escuela', 'Escuela'],
-                            ['unidad', 'Unidad'],
+                            ['unidad', 'Unidad']    
                         ].map(([campo, etiqueta]) => (
                             <label key={campo}>
-                                {etiqueta}
+                                {etiqueta}: &nbsp;
                                <select value={filtros[campo]} onChange={actualizarFiltro(campo)}>
                                     <option value="">Todos</option>
                                     {opcionesFiltro(campo).map((opcion) => (

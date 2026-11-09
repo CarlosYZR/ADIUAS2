@@ -30,7 +30,7 @@ const Header = () => {
                 <nav class="program-nav" aria-label="Navegación principal">
                     <div class="program-nav-inner">
                         <a href="/" className='header-nav-item'>Inicio</a>
-                        <a onClick={()=>navigate('/registro')} aria-current="page" >Registrar visita</a>
+                        <a onClick={() => navigate('/registro')} aria-current="page" >Registrar visita</a>
                         <details class="nav-dropdown">
                             <summary className='header-nav-item'>Ciclo escolar</summary>
                             <div class="dropdown-panel">
